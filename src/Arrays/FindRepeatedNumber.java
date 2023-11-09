@@ -18,9 +18,19 @@ public class FindRepeatedNumber {
 
     }
     //Complexity(N,1)
-    public static int repeatedNumberLinear(final int[] A){
+    public static int repeatedNumberLinear(final int[] nums){
+        int slow = nums[0], fast = nums[0];
+        do {
+            slow = nums[slow];
+            fast = nums[nums[fast]];
+        } while (slow != fast);
 
-        return -1;
+        fast = nums[0];
+        while (slow != fast) {
+            slow = nums[slow];
+            fast = nums[fast];
+        }
+        return slow;
     }
     public static void main(String args[]){
          final int arr[] = {1,2,3,4,3};

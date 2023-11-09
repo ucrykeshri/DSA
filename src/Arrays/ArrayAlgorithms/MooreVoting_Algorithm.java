@@ -27,6 +27,7 @@ public class MooreVoting_Algorithm {
                 and make current majority element as arr[i] ;
             3. At every iteration if arr[i] == current majority element , increase the count by 1 ;
             4. else decrease the counter by 1 ;
+            5.At last make single traversal and check if the count of current majority element is >n/2 times or not.
      */
     //(>n/2)
     public static int best(int arr[]){
@@ -52,7 +53,7 @@ public class MooreVoting_Algorithm {
     }
     //(>n/3)
     /*
-      1. In heere, At max , the array can have only 2 elements which can be appeared more than
+      1. In here, At max , the array can have only 2 elements which can be appeared more than
          N/3 times.
       2.
      */
